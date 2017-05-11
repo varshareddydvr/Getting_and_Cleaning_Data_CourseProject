@@ -54,7 +54,7 @@ train_data <- cbind(as.data.table(SubjectTrain), Ytrain, Xtrain)
 test_data <- cbind(as.data.table(SubjectTest), Ytest, Xtest)
 
 # Merging the training and the test sets to create one data set.
-data <- rbind(train_data, test_data)
+data <- rbind(test_data, train_data)
 
 # Melt the data into a form suitable for easy casting
 labels   = c("Subject", "ActivityID", "ActivityLabel")
